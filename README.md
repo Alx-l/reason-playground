@@ -6,6 +6,6 @@ What's [Reason](https://reasonml.github.io/)?
 
 - Clone the repo
 - install the dependencies `$ npm install`
-- dev mode `$ npm run serve-app`
+- dev mode `$ npm run dev`
 - build `$ npm run build-app`
 - [more infos](https://poi.js.org/guide/transforms.html#reason-and-ocaml)
