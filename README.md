@@ -1,4 +1,6 @@
-# [Reason](https://reasonml.github.io/) playground.
+# Reason playground.
+
+What's [Reason](https://reasonml.github.io/)?
 
 ## Usage:
 
