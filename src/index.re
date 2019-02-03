@@ -1,9 +1,9 @@
 type item = {
   name: string,
-  id: int
-}
+  id: int,
+};
 
-let items = [{ name: "one", id: 1 }, { name: "two", id: 2 }];
+let items = [{name: "one", id: 1}, {name: "two", id: 2}];
 
 let mapping =
   Utils.find(i => i.name === "onee", items)
@@ -19,3 +19,18 @@ let pmatching =
     }
   )
   |> Js.log;
+
+open Webapi.Dom;
+
+let app = document |> Document.querySelector("#app");
+
+let handleClick = (evt: Dom.mouseEvent) => {
+  Js.log(evt);
+};
+
+switch (app) {
+| Some(elm) =>
+  Element.addClickEventListener(handleClick, elm);
+  Element.setInnerHTML(elm, "cool");
+| None => ()
+};

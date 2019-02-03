@@ -2,6 +2,7 @@
 
 import * as $$String from "bs-platform/lib/es6/string.js";
 import * as Belt_Option from "bs-platform/lib/es6/belt_Option.js";
+import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
 import * as Utils$ReasonPlayground from "./utils.bs.js";
 
 var items = /* :: */[
@@ -34,14 +35,30 @@ var match = Utils$ReasonPlayground.find((function (i) {
 
 console.log(match !== undefined ? $$String.uppercase(match[/* name */0]) : "oops");
 
+var app = document.querySelector("#app");
+
+function handleClick(evt) {
+  console.log(evt);
+  return /* () */0;
+}
+
+if (!(app == null)) {
+  app.addEventListener("click", handleClick);
+  app.innerHTML = "cool";
+}
+
 var mapping = /* () */0;
 
 var pmatching = /* () */0;
+
+var app$1 = (app == null) ? undefined : Caml_option.some(app);
 
 export {
   items ,
   mapping ,
   pmatching ,
+  app$1 as app,
+  handleClick ,
   
 }
 /*  Not a pure module */

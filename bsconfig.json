@@ -9,6 +9,7 @@
     "in-source": true
   },
   "suffix": ".bs.js",
+  "bs-dependencies": ["bs-webapi"],
   "bsc-flags": ["-bs-super-errors"],
   "namespace": true,
   "refmt": 3
