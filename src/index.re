@@ -6,14 +6,14 @@ type item = {
 let items = [{name: "one", id: 1}, {name: "two", id: 2}];
 
 let mapping =
-  Utils.find(i => i.name === "onee", items)
+  Belt_List.getBy(items, i => i.name === "two")
   |> Belt_Option.map(_, value => String.uppercase(value.name))
   |> Belt.Option.getWithDefault(_, "not found")
   |> Js.log;
 
 let pmatching =
   (
-    switch (Utils.find(i => i.name === "onee", items)) {
+    switch (Belt_List.getBy(items, i => i.name === "two")) {
     | Some(item) => String.uppercase(item.name)
     | None => "oops"
     }
