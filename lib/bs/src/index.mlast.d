@@ -1,1 +1,1 @@
-src/index-ReasonPlayground.cmj :
+src/index-ReasonPlayground.cmj : src/domUtils-ReasonPlayground.cmj src/domUtils-ReasonPlayground.cmi

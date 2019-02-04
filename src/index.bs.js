@@ -4,6 +4,7 @@ import * as $$String from "bs-platform/lib/es6/string.js";
 import * as Belt_List from "bs-platform/lib/es6/belt_List.js";
 import * as Belt_Option from "bs-platform/lib/es6/belt_Option.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
+import * as DomUtils$ReasonPlayground from "./domUtils.bs.js";
 
 var items = /* :: */[
   /* record */[
@@ -20,7 +21,7 @@ var items = /* :: */[
 ];
 
 var __x = Belt_List.getBy(items, (function (i) {
-        return i[/* name */0] === "two";
+        return i[/* name */0] === "twoo";
       }));
 
 var __x$1 = Belt_Option.map(__x, (function (value) {
@@ -30,17 +31,28 @@ var __x$1 = Belt_Option.map(__x, (function (value) {
 console.log(Belt_Option.getWithDefault(__x$1, "not found"));
 
 var match = Belt_List.getBy(items, (function (i) {
-        return i[/* name */0] === "two";
+        return i[/* name */0] === "twoo";
       }));
 
 console.log(match !== undefined ? $$String.uppercase(match[/* name */0]) : "oops");
 
 var app = document.querySelector("#app");
 
+var firstInput = document.createElement("input");
+
+DomUtils$ReasonPlayground.appendChild$prime(firstInput);
+
 function handleClick(evt) {
   console.log(evt);
   return /* () */0;
 }
+
+function handleFirstInput(evt) {
+  console.log(evt.target.value);
+  return /* () */0;
+}
+
+firstInput.addEventListener("input", handleFirstInput);
 
 if (!(app == null)) {
   app.addEventListener("click", handleClick);
@@ -58,7 +70,9 @@ export {
   mapping ,
   pmatching ,
   app$1 as app,
+  firstInput ,
   handleClick ,
+  handleFirstInput ,
   
 }
 /*  Not a pure module */
