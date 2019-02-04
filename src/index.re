@@ -33,7 +33,7 @@ let handleClick = (evt: Dom.mouseEvent) => {
 };
 
 let handleFirstInput = (evt: Dom.inputEvent) => {
-  DomUtils.targetValue(InputEvent.target(evt)) |> Js.log;
+  DomUtils.unsafeTargetValue(InputEvent.target(evt)) |> Js.log;
 };
 
 Element.addInputEventListener(handleFirstInput, firstInput);

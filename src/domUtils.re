@@ -10,6 +10,6 @@ let appendChild' = (elm: Dom.element) => {
 };
 
 [@bs.val]
-external appendChild: Dom.element => Dom.element = "document.body.appendChild";
+external unesafeAppendChild: Dom.element => Dom.element = "document.body.appendChild";
 
-[@bs.get] external targetValue: Dom.eventTarget => string = "value";
+[@bs.get] external unsafeTargetValue: Dom.eventTarget => string = "value";
