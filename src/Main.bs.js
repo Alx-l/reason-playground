@@ -40,8 +40,6 @@ var app = document.querySelector("#app");
 
 var firstInput = document.createElement("input");
 
-DomUtils$ReasonPlayground.appendChild(firstInput);
-
 function handleClick(evt) {
   console.log(evt);
   return /* () */0;
@@ -54,9 +52,12 @@ function handleFirstInput(evt) {
 
 firstInput.addEventListener("input", handleFirstInput);
 
-if (!(app == null)) {
+if (app == null) {
+  undefined;
+} else {
   app.addEventListener("click", handleClick);
   app.innerHTML = "cool";
+  DomUtils$ReasonPlayground.appendChild(firstInput, Caml_option.some(app), /* () */0);
 }
 
 var mapping = /* () */0;

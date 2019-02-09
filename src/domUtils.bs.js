@@ -4,14 +4,18 @@ import * as DocumentRe from "bs-webapi/src/dom/nodes/DocumentRe.js";
 import * as Belt_Option from "bs-platform/lib/es6/belt_Option.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
 
-function appendChild(elm) {
+function appendChild(child, target, param) {
   var match = DocumentRe.asHtmlDocument(document);
   if (match !== undefined) {
-    var __x = Caml_option.valFromOption(match).body;
-    return Belt_Option.map((__x == null) ? undefined : Caml_option.some(__x), (function (body) {
-                  body.appendChild(elm);
-                  return /* () */0;
-                }));
+    if (target !== undefined) {
+      return Caml_option.valFromOption(target).appendChild(child), /* () */0;
+    } else {
+      var __x = Caml_option.valFromOption(match).body;
+      return Belt_Option.map((__x == null) ? undefined : Caml_option.some(__x), (function (body) {
+                    body.appendChild(child);
+                    return /* () */0;
+                  }));
+    }
   }
   
 }
