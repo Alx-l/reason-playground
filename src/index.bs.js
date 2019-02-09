@@ -40,7 +40,7 @@ var app = document.querySelector("#app");
 
 var firstInput = document.createElement("input");
 
-DomUtils$ReasonPlayground.appendChild$prime(firstInput);
+DomUtils$ReasonPlayground.appendChild(firstInput);
 
 function handleClick(evt) {
   console.log(evt);

@@ -4,7 +4,7 @@ import * as DocumentRe from "bs-webapi/src/dom/nodes/DocumentRe.js";
 import * as Belt_Option from "bs-platform/lib/es6/belt_Option.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
 
-function appendChild$prime(elm) {
+function appendChild(elm) {
   var match = DocumentRe.asHtmlDocument(document);
   if (match !== undefined) {
     var __x = Caml_option.valFromOption(match).body;
@@ -17,7 +17,7 @@ function appendChild$prime(elm) {
 }
 
 export {
-  appendChild$prime ,
+  appendChild ,
   
 }
 /* DocumentRe Not a pure module */

@@ -26,7 +26,7 @@ let app = document |> Document.querySelector("#app");
 
 let firstInput = document |> Document.createElement("input");
 
-DomUtils.appendChild'(firstInput);
+DomUtils.appendChild(firstInput);
 
 let handleClick = (evt: Dom.mouseEvent) => {
   Js.log(evt);

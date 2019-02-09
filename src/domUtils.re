@@ -1,6 +1,6 @@
 open Webapi.Dom;
 
-let appendChild' = (elm: Dom.element) => {
+let appendChild = (elm: Dom.element) => {
   switch (document |> Document.asHtmlDocument) {
   | Some(doc) =>
     HtmlDocument.body(doc)
@@ -10,6 +10,6 @@ let appendChild' = (elm: Dom.element) => {
 };
 
 [@bs.val]
-external unesafeAppendChild: Dom.element => Dom.element = "document.body.appendChild";
+external unsafeAppendChild: Dom.element => Dom.element = "document.body.appendChild";
 
 [@bs.get] external unsafeTargetValue: Dom.eventTarget => string = "value";
