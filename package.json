@@ -2,7 +2,7 @@
   "name": "reason-playground",
   "version": "1.0.0",
   "license": "ISC",
-  "source": "src/index.re",
+  "source": "src/Main.re",
   "scripts": {
     "dev": "run-p watch-world serve-app",
     "build": "run-s make-world build-app",

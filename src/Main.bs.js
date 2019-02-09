@@ -4,7 +4,7 @@ import * as $$String from "bs-platform/lib/es6/string.js";
 import * as Belt_List from "bs-platform/lib/es6/belt_List.js";
 import * as Belt_Option from "bs-platform/lib/es6/belt_Option.js";
 import * as Caml_option from "bs-platform/lib/es6/caml_option.js";
-import * as DomUtils$ReasonPlayground from "./domUtils.bs.js";
+import * as DomUtils$ReasonPlayground from "./DomUtils.bs.js";
 
 var items = /* :: */[
   /* record */[
